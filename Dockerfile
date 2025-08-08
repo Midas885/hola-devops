@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Comando para ejecutar la aplicación cuando el contenedor inicie
-CMD ["python", "app.py"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000"]
